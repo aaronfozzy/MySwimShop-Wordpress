@@ -1,0 +1,146 @@
+.bc-product-single {
+  width: 1050px;
+  height: auto!important;
+  margin: auto;
+  clear:both;
+  .additional-title-info {
+    font-size: $font-ms;
+    font-weight: $font-regular;
+    text-transform: uppercase;
+
+  }
+  .bc-product-flag--sale {
+    top: 0px!important;
+    right: 0px!important;
+    background-color: $second-color!important;
+    border-radius: 50% 0% 50% 50%!important;
+  }
+  .bc-product__title {
+    font-size: $font-ml!important;
+    font-weight: $font-regular!important;
+  }
+  .bc-product__pricing {
+    width: 100%;
+    float: left;
+    clear:both;
+    margin-top: 5px;
+    .bc-product__pricing--api {
+      width: 100%;
+      float: left;
+      clear:both;
+    }
+    .bc-product__retail-price {
+      width: 100%;
+      float: left;
+      clear:both;
+      text-align: left;
+      font-size: $font-s!important;
+    }
+    .bc-product__price--base {
+      width: 100%;
+      float: left;
+      text-align: left;
+      font-size: $font-m;
+    }
+    .bc-product__original-price {
+      width: auto;
+      text-align: left;
+      float: left;
+      margin-right: 20px;
+      font-size: $font-m;
+    }
+    .bc-product__price--sale {
+      width: auto;
+      text-align: left;
+      float: left;
+      margin-right: 0px;
+      font-size: $font-m;
+      color: $second-color;
+    }
+  }
+  .product-info-tabs {
+    width: 100%;
+    float: left;
+    clear:both;
+    border-bottom: 2px solid $first-color;
+    ul {
+      width: 100%;
+      float: left;
+      clear: both;
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+      li {
+        width: auto;
+        float: left;
+        padding: 10px 20px 10px 20px;
+        margin: 0px;
+        background-color: $color-offwhite;
+        text-align: center;
+        cursor: pointer;
+        font-weight: $font-medium;
+        @include box-sizing(border);
+        &.active {
+          background-color: $first-color;
+          color: $color-white;
+        }
+      }
+    }
+  }
+  .product-info-panels {
+    width: 100%;
+    float: left;
+    clear:both;
+    ul {
+      width: 100%;
+      float: left;
+      clear:both;
+      list-style: none;
+      li {
+        display: none;
+        padding: 20px;
+        @include box-sizing(border);
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+  .custom-fields-hidden {
+    display: none;
+  }
+
+  .bc-product-form__options {
+    position: relative;
+  }
+  @include max-screen($screen-large) {
+    padding-left: 20px!important;
+    padding-right: 20px!important;
+  }
+}
+.top-line-description {
+  width: 100%;
+  float: left;
+  clear:both;
+  text-align: center;
+}
+
+.bc-ajax-add-to-cart__message-wrapper {
+  width: 100%;
+  float: left;
+  clear: both;
+}
+
+.bc-product-form__purchase-message {
+  width: 100%;
+  float: left;
+  clear:both;
+  background-color: $second-color;
+  color: $color-white;
+  font-size: $font-s!important;
+  margin-bottom: 10px;
+  padding: 10px!important;
+  position: relative;
+  top: -10px;
+  @include box-sizing(border);
+}

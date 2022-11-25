@@ -1,0 +1,125 @@
+.form-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2000;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.newsletter-signup {
+  width: 958px;
+  height: 510px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  z-index: 2500;
+  background-color: $color-white;
+  display: none;
+  @include transform(translate(-50%, -50%));
+  .form-holder {
+    width: 50%;
+    float: left;
+    clear:both;
+    padding: 30px 0px 30px 30px;
+    @include box-sizing(border);
+    .description {
+      width: 100%;
+      float: left;
+      clear:both;
+      line-height: normal;
+      color: $color-grey;
+      margin: 20px 0px 20px 0px;
+    }
+    .iframe-holder {
+      width: 100%;
+      float: left;
+      clear:both;
+      iframe {
+        width: 100%;
+        height: 500px;
+        float: left;
+        clear:both;
+        border: none;
+      }
+    }
+    @include max-screen($screen-large) {
+      width: 100%;
+      float: left;
+      clear:both;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 200;
+      padding: 30px 30px 30px 30px;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+  @include max-screen($screen-large){
+    width: 100%;
+    left: 0px;
+    @include transform(translate(0%, -50%));
+  }
+  .image-holder {
+    width: 50%;
+    float: right;
+    img {
+      float: right;
+    }
+    @include max-screen($screen-large) {
+      width: 100%;
+      float: left;
+      clear:both;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 100;
+    }
+  }
+}
+
+.webform-control {
+  width: 100%;
+  float: left;
+  clear:both;
+  margin-bottom: 15px;
+  .webform-control-label {
+    width: 100%;
+    float: left;
+    clear:both;
+    font-family: $font-family-primary;
+  }
+  .webform-control-text {
+    width: 100%;
+    float: left;
+    clear:both;
+    input {
+      width: 100%;
+      float: left;
+      clear:both;
+      padding: 10px;
+      border: 2px solid $color-lgrey;
+      @include box-sizing(border);
+    }
+  }
+}
+
+.form-submit {
+  width: 100%;
+  float: left;
+  clear:both;
+  button {
+    width: 250px;
+    float: left;
+    margin-right: 10px;
+    background-color: $first-color;
+    color: $color-white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    @include box-sizing(border);
+  }
+}

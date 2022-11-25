@@ -1,0 +1,41 @@
+.btn-primary {
+  background-color: $second-color;
+  border: 1px solid $second-color;
+  &:hover {
+    background-color: lighten($second-color, 5%);
+    border: 1px solid $second-color;
+  }
+}
+.button-primary {
+  background-color: $first-color!important;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  color: $second-color;
+  border: 1px solid $second-color;
+  &:hover {
+    color: $second-color;
+    background-color: $color-white;
+    border: 1px solid $second-color;
+  }
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+  background-color: lighten($second-color, 20%);
+  border-color: $second-color;
+}
+
+.bc-btn {
+  background-color: $first-color!important;
+  border: none;
+  cursor: pointer;
+}
+
+.bc-link {
+  color: $second-color!important;
+  cursor: pointer;
+  border: none;
+}

@@ -1,0 +1,99 @@
+.facet-section {
+  width: 100%;
+  float: left;
+  clear:both;
+  background-color: transparent;
+  min-height: 300px;
+}
+
+.attached-categories {
+  width: 100%;
+  float: left;
+  clear:both;
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    list-style: none;
+    li {
+      @include calc(width, "25% - 20px");
+      height: 200px;
+      background-position: center center;
+      background-size: cover;
+      position: relative;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      @extend .animated;
+      @extend .fadeIn;
+      animation-duration: 1s;
+      @include max-screen($screen-medium) {
+        @include calc(width, "50% - 20px");
+      }
+      &:nth-child(1) {
+        animation-delay: 100ms;
+      }
+      &:nth-child(2) {
+        animation-delay: 200ms;
+      }
+      &:nth-child(3) {
+        animation-delay: 300ms;
+      }
+      &:nth-child(4) {
+        animation-delay: 400ms;
+      }
+      &:nth-child(5) {
+        animation-delay: 500ms;
+      }
+      &:nth-child(6) {
+        animation-delay: 600ms;
+      }
+      &:nth-child(7) {
+        animation-delay: 700ms;
+      }
+      &:nth-child(8) {
+        animation-delay: 800ms;
+      }
+      &:nth-child(9) {
+        animation-delay: 900ms;
+      }
+      .overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 100;
+        transition: background 500ms ease-in-out;
+      }
+      a {
+        width: 100%;
+        height: 100%;
+        float: left;
+        clear:both;
+        position: relative;
+        z-index: 200;
+        text-decoration: none;
+        .category-name {
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform:translate(-50%, -50%);
+          text-align: center;
+          color: $color-white;
+          font-size: $font-m;
+          font-weight: $font-bold;
+          text-decoration: none;
+          border-bottom: none;
+        }
+      }
+      &:hover {
+        .overlay {
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+  }
+}

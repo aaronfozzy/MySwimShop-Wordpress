@@ -1,0 +1,234 @@
+// Default Colours //
+$color-red: #F44336;
+$color-pink: #E91E63;
+$color-purple: #9C27B0;
+$color-dpurple: #673AB7;
+$color-indigo: #3F51B5;
+$color-blue: #307DC3;
+$color-lblue: #03A9F4;
+$color-cyan: #00BCD4;
+$color-teal: #26acb3;
+$color-green: #4CAF50;
+$color-lgreen: #8BC34A;
+$color-lime: #CDDC38;
+$color-yellow: #FFEB3B;
+$color-amber: #FFC107;
+$color-orange: #FF9800;
+$color-dorange: #FF5722;
+$color-brown: #795548;
+
+// Grey Scale Colours //
+$color-black: #313131;
+$color-dgrey: #545454;
+$color-grey: #9E9E9E;
+$color-lgrey: #c1c1c1;
+$color-offwhite: #f3f3f3;
+$color-white: #ffffff;
+
+// Main Colour Scheme //
+$first-color: $color-blue;
+$second-color: $color-teal;
+$third-color: $color-cyan;
+
+// Bootstap Overrides //
+
+.text-dark {
+  color: $color-black!important;
+}
+
+a.text-dark {
+  color: $color-black!important;
+  &:hover {
+    color: lighten($color-black, 10%);
+  }
+}
+
+// Background Classes //
+.background-red {
+  background-color: $color-red;
+}
+
+.background-pink {
+  background-color: $color-pink;
+}
+
+.background-purple {
+  background-color: $color-purple;
+}
+
+.background-dpurple {
+  background-color: $color-dpurple;
+}
+
+.background-indigo {
+  background-color: $color-indigo;
+}
+
+.background-blue {
+  background-color: $color-blue;
+}
+
+.background-lblue {
+  background-color: $color-lblue;
+}
+
+.background-cyan {
+  background-color: $color-cyan;
+}
+
+.background-cyan {
+  background-color: $color-cyan;
+}
+
+.background-teal {
+  background-color: $color-teal;
+}
+
+.background-green {
+  background-color: $color-green;
+}
+
+.background-lgreen {
+  background-color: $color-lgreen;
+}
+
+.background-lime {
+  background-color: $color-lime;
+}
+
+.background-yellow {
+  background-color: $color-yellow;
+}
+
+.background-amber {
+  background-color: $color-amber;
+}
+
+.background-orange {
+  background-color: $color-orange;
+}
+
+.background-dorange {
+  background-color: $color-dorange;
+}
+
+.background-brown {
+  background-color: $color-brown;
+}
+
+.background-black {
+  background-color: $color-brown;
+}
+
+.background-dgrey {
+  background-color: $color-dgrey;
+}
+
+.background-grey {
+  background-color: $color-grey;
+}
+
+.background-lgrey {
+  background-color: $color-lgrey;
+}
+
+.background-offwhite{
+  background-color: $color-offwhite;
+}
+
+// Font Colors Classes //
+.font-red {
+  font-color: $color-red;
+}
+
+.font-pink {
+  font-color: $color-pink;
+}
+
+.font-purple {
+  font-color: $color-purple;
+}
+
+.font-dpurple {
+  font-color: $color-dpurple;
+}
+
+.font-indigo {
+  font-color: $color-indigo;
+}
+
+.font-blue {
+  font-color: $color-blue;
+}
+
+.font-lblue {
+  font-color: $color-lblue;
+}
+
+.font-cyan {
+  font-color: $color-cyan;
+}
+
+.font-cyan {
+  font-color: $color-cyan;
+}
+
+.font-teal {
+  font-color: $color-teal;
+}
+
+.font-green {
+  font-color: $color-green;
+}
+
+.font-lgreen {
+  font-color: $color-lgreen;
+}
+
+.font-lime {
+  font-color: $color-lime;
+}
+
+.font-yellow {
+  font-color: $color-yellow;
+}
+
+.font-amber {
+  font-color: $color-amber;
+}
+
+.font-orange {
+  font-color: $color-orange;
+}
+
+.font-dorange {
+  font-color: $color-dorange;
+}
+
+.font-brown {
+  font-color: $color-brown;
+}
+
+.font-black {
+  font-color: $color-brown;
+}
+
+.font-dgrey {
+  font-color: $color-dgrey;
+}
+
+.font-grey {
+  font-color: $color-grey;
+}
+
+.font-lgrey {
+  font-color: $color-lgrey;
+}
+
+.font-offwhite{
+  font-color: $color-offwhite;
+}
+
+.font-white {
+  font-color: $color-white;
+}

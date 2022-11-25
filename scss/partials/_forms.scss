@@ -1,0 +1,13 @@
+.form-control {
+  color: $color-black;
+  background-color: $color-offwhite;
+  &:focus {
+    border-color: $color-black;
+    color: $color-black;
+    background-color: darken($color-offwhite, 5%);
+    box-shadow: 0 -1px 0 0 $color-black inset;
+  }
+  &::placeholder {
+    color: $color-black;
+  }
+}

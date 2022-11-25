@@ -1,0 +1,10 @@
+.mobile-nav-btn-holder {
+  position: absolute;
+  top: 7px;
+  right: 0px;
+  display: block;
+  z-index: 1100;
+  @include min-screen($screen-wide){
+    display: none;
+  }
+}

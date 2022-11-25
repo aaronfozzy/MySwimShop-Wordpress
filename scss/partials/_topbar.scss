@@ -1,0 +1,40 @@
+.topbar {
+  background-color: $first-color;
+  .right-topbar {
+    .menu-top-menu-container {
+      width: 100%;
+      float: left;
+      clear:both;
+      ul {
+        width: 100%;
+        float: left;
+        clear:both;
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        li {
+          float: right;
+          margin-right: 10px;
+          margin-bottom: 0px;
+          padding: 0px 0px 3px 0px;
+          a {
+            color: $color-white;
+            font-size: $font-xs;
+            margin-bottom: 0px;
+          }
+        }
+      }
+    }
+  }
+  .center-topbar {
+    background-color: $second-color;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-white;
+    padding-top: 2px;
+    @include box-sizing(border);
+    .strong {
+      font-weight: $font-bold;
+    }
+  }
+}

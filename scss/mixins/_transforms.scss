@@ -1,0 +1,11 @@
+@mixin rotate($deg) {
+  transform: rotate($deg);
+}
+
+@mixin transform($params) {
+  transform: $params;
+}
+
+@mixin translate($deg) {
+  transform: translate($deg);
+}

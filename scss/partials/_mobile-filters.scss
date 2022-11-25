@@ -1,0 +1,68 @@
+.mobile-filter-btn {
+  display: none;
+  &.active {
+    display: none;
+    @include use-sprite(filter-icon);
+    position: absolute;
+    top: 20px;
+    right: 130px;
+    @include max-screen($screen-medium) {
+      display: block;
+    }
+  }
+}
+
+.mobile-filtering {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 3000;
+  background-color: $color-white;
+  display: none;
+  .product-filters {
+    display: block;
+    background-color: $color-white;
+    ul {
+      width: 100%;
+      display: block;
+      margin: 0px;
+      padding: 0px;
+      list-style: none;
+      li {
+        width: 100%;
+        float: left;
+        clear:both;
+        margin-right: 0px;
+        margin-bottom: 20px;
+        .facet-title {
+          width: 100%;
+          float: left;
+          clear:both;
+          font-size: $font-s;
+          font-weight: $font-medium;
+          color: $color-black;
+        }
+        .facet-filter {
+          width: 100%;
+          float: left;
+          clear:both;
+          .facetwp-facet {
+            margin-bottom: 0px!important;
+            .facetwp-dropdown {
+              min-width: 150px;
+              width: 100%;
+              border: 2px solid $color-black;
+              -webkit-appearance: none;
+              border-radius: 0px;
+              padding: 10px;
+              font-size: $font-xs;
+              @include box-sizing(border);
+            }
+          }
+        }
+      }
+    }
+  }
+}

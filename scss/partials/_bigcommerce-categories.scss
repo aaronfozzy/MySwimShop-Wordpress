@@ -1,0 +1,32 @@
+.facetwp-template {
+  h1 {
+    width: 100%;
+    float: left;
+    clear:both;
+    border-bottom: none;
+    padding-bottom: 10px;
+    font-size: $font-l;
+    font-weight: $font-regular;
+  }
+}
+
+.bc-product-archive__refinery {
+  width: 100%;
+  float: left;
+  clear:both;
+  background-color: $color-offwhite;
+  margin: 0px!important;
+  padding: 10px;
+  @include box-sizing(border);
+}
+
+.navigation {
+  &.pagination {
+    width: 100%;
+    float: left;
+    clear:both;
+    .screen-reader-text {
+      display: none;
+    }
+  }
+}

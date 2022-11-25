@@ -1,0 +1,48 @@
+@mixin transition($transition-property, $transition-time, $method) {
+  transition: $transition-property $transition-time $method;
+}
+
+@mixin transition-delay($transition-delay-time) {
+  transition-delay: $transition-delay-time;
+}
+
+@mixin animation-duration($animduration) {
+  animation-duration: $animduration;
+}
+
+@mixin animation-delay($animationdelay) {
+  animation-delay: $animationdelay;
+}
+
+@mixin animation-scatter($animationMultiplier) {
+  &:nth-child(1) {
+    animation-delay: 0ms;
+  }
+  &:nth-child(2) {
+    animation-delay: $animationMultiplier;
+  }
+  &:nth-child(3) {
+    animation-delay: $animationMultiplier * 1.2;
+  }
+  &:nth-child(4) {
+    animation-delay: $animationMultiplier * 1.4;
+  }
+  &:nth-child(5) {
+    animation-delay: $animationMultiplier * 1.6;
+  }
+  &:nth-child(6) {
+    animation-delay: $animationMultiplier * 1.8;
+  }
+  &:nth-child(7) {
+    animation-delay: $animationMultiplier * 2;
+  }
+  &:nth-child(8) {
+    animation-delay: $animationMultiplier * 2.2;
+  }
+  &:nth-child(9) {
+    animation-delay: $animationMultiplier * 2.4;
+  }
+  &:nth-child(10) {
+    animation-delay: $animationMultiplier * 2.6;
+  }
+}

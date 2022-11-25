@@ -1,0 +1,7 @@
+.logo {
+  @include use-sprite(logo);
+  margin-top: 5px;
+  display: block;
+  position: relative;
+  z-index: 300;
+}

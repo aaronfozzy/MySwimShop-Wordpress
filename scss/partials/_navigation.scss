@@ -1,0 +1,314 @@
+.menu-standard-desktop-menu-container {
+  width: 100%;
+  float: left;
+  clear:both;
+  background-color: $color-offwhite;
+  display: block;
+  #menu-standard-desktop-menu {
+    width: 1060px;
+    margin: auto;
+    clear:both;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    li {
+      float: left;
+      margin-right: 20px;
+      display: block;
+      margin: 0px;
+      padding: 0px;
+      cursor: pointer;
+      a {
+        width: 100%;
+        float: left;
+        clear:both;
+        padding: 13px 15px;
+        font-weight: $font-bold;
+        font-size: $font-s;
+        color: $color-black;
+        @include box-sizing(border);
+        .title {
+          width: 100%;
+          float: left;
+          clear:both;
+        }
+      }
+      .image-menu {
+        width: 265px * 2;
+        height: 352px;
+        position: absolute;
+        right: 0px;
+        top: 50px;
+        display: none;
+        overflow: hidden;
+        z-index: 25000;
+        ul {
+          width: 100%;
+          height: 100%;
+          display: block;
+          animation-duration: 2000ms;
+          @extend .animated;
+          @extend .fadeIn;
+          li {
+            width: 100%;
+            height: 100%;
+            display: block;
+            padding: 5px;
+            @include box-sizing(border);
+            img {
+              width: 100%;
+              height: 100%;
+              display: block;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+      ul {
+        display: none;
+      }
+      .sub-menu-wrap {
+        width: 1060px;
+        height: 352px;
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        display: none;
+        background-color: lighten($color-offwhite, 2%);
+        border: 2px solid $color-white;
+        z-index: 20000;
+        overflow: hidden;
+        -webkit-box-shadow: 10px 10px 79px -2px rgba(0,0,0,0.15);
+        -moz-box-shadow: 10px 10px 79px -2px rgba(0,0,0,0.15);
+        box-shadow: 10px 10px 79px -2px rgba(0,0,0,0.15);
+        @extend .animated;
+        @extend .fadeIn;
+        ul {
+          width: 265px;
+          height: 100%;
+          float: left;
+          display: block;
+          border-right: 2px solid $color-offwhite;
+          background-color: $color-white;
+          position: absolute;
+          overflow-y: scroll;
+          overflow-x: hidden;
+          &::-webkit-scrollbar {
+            width: 10px;
+          }
+          &::-webkit-scrollbar-track {
+            background: lighten($color-offwhite, 2.5%);
+          }
+
+          /* Handle */
+          &::-webkit-scrollbar-thumb {
+            background: $color-black;
+          }
+
+          /* Handle on hover */
+          &::-webkit-scrollbar-thumb:hover {
+            background: $second-color;
+          }
+          li {
+            width: 100%;
+            float: left;
+            clear:both;
+            background-color: $color-white;
+            cursor: pointer;
+            font-size: $font-s;
+            @extend .animated;
+            @extend .fadeIn;
+            @include animation-scatter(150ms);
+            &.menu-item-has-children {
+              a {
+                position: relative;
+                &:before {
+                  @include use-sprite(child-megamenu-arrow);
+                  content: "";
+                  display: block;
+                  position: absolute;
+                  right: 30px;
+                  top: 15px;
+                  transition: right 250ms ease-in-out;
+                }
+              }
+            }
+            a {
+              font-size: $font-s;
+              font-weight: $font-regular;
+            }
+            .sub-menu-wrap {
+              display: none;
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              left: 265px;
+              top: 0px;
+              border: none;
+              -webkit-box-shadow: 10px 10px 79px -2px rgba(0,0,0,0.15);
+              -moz-box-shadow: 10px 10px 79px -2px rgba(0,0,0,0.15);
+              box-shadow: 10px 10px 79px -2px rgba(0,0,0,0.15);
+              z-index: 30000;
+              ul {
+                width: 100%;
+                height: 100%;
+                float: left;
+                display: block;
+                border: none;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                &::-webkit-scrollbar {
+                  width: 10px;
+                }
+                &::-webkit-scrollbar-track {
+                  background: lighten($color-offwhite, 2.5%);
+                }
+
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                  background: $color-black;
+                }
+
+                /* Handle on hover */
+                &::-webkit-scrollbar-thumb:hover {
+                  background: $second-color;
+                }
+              }
+            }
+            &:hover {
+              background-color: darken($color-white, 5%);
+              &.menu-item-has-children {
+                a {
+                  position: relative;
+                  &:before {
+                    @include use-sprite(child-megamenu-arrow);
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    right: 20px;
+                    top: 15px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      #menu-item-10987 {
+        li {
+          display: none;
+        }
+      }
+    }
+  }
+  @include max-screen($screen-large) {
+    display: none;
+  }
+}
+
+.hovered {
+  overflow-y: scroll;
+}
+
+.top-nav-section {
+  width: 100%;
+  padding: 15px 0px 15px 0px;
+  .form-group {
+    margin-bottom: 0px;
+  }
+  .header-action-button {
+    cursor: pointer;
+  }
+  .icon-account {
+    @include use-sprite(account-icon);
+  }
+  .icon-wishlist {
+    @include use-sprite(wishlist-icon);
+  }
+  .icon-basket {
+    @include use-sprite(basket-icon);
+  }
+}
+
+.usp-section {
+  width: 100%;
+  background-color: $color-white;
+  padding: 0px;
+  @include box-sizing(border);
+  .icon {
+    float: left;
+    clear:both;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+  .personal-service-icon {
+    @include use-sprite(personal-service-icon);
+
+  }
+  .free-delivery-icon {
+    @include use-sprite(free-delivery-icon);
+
+  }
+  .worldwide-delivery-icon {
+    @include use-sprite(worldwide-delivery-icon);
+
+  }
+  .returns-icon {
+    @include use-sprite(returns-icon);
+
+  }
+  .item {
+    padding: 15px 0px 11px 0px;
+    a {
+      text-decoration: none;
+      .icon {
+        border-bottom: 0px;
+      }
+      .title {
+        @include calc(width, "100% - 60px");
+        float: left;
+        font-size: $font-xs;
+        font-weight: $font-bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-bottom: none;
+      }
+      .desc {
+        float: left;
+        font-size: $font-xs;
+        font-weight: $font-regular;
+        text-decoration: none;
+        border-bottom: none;
+      }
+    }
+    &:hover {
+      .title {
+        color: $second-color;
+      }
+    }
+  }
+  .phone-usp {
+    min-width: 200px;
+    min-height: 50px;
+    background-color: $second-color;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    text-decoration: none;
+    border-bottom: none;
+    .number {
+      text-align: center;
+      color: $color-white;
+      font-weight: $font-bold;
+      text-decoration: none;
+      border-bottom: none;
+    }
+    &:hover {
+      background-color: lighten($second-color, 5%);
+    }
+  }
+
+}

@@ -1,0 +1,18 @@
+.menu-copyright-menu-container, #bs4navbar-footer-one, #bs4navbar-footer-two, #bs4navbar-footer-three {
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#menu-copyright-menu-3, #menu-copyright-menu, #menu-copyright-menu-1, #menu-copyright-menu-2 {
+  list-style: none;
+  li {
+    float: left;
+    &::marker {
+      display: none;
+    }
+    a {
+      padding: 0px;
+      margin: 0px;
+    }
+  }
+}

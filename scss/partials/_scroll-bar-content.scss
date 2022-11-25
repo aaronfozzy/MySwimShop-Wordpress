@@ -1,0 +1,15 @@
+.scroll-wrapper {
+  width: 210px;
+  height: 400px;
+  z-index: 2000;
+  top: 43px;
+  left: 0px;
+  .scroll-content {
+    width: 210px;
+    height: 400px!important;
+    z-index: 2000;
+    top: 0px;
+    left: 0px;
+    display: block;
+  }
+}

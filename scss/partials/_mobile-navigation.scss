@@ -1,0 +1,269 @@
+.mobile-navigation {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: $first-color;
+  color: $color-white;
+  z-index: 1000;
+  padding: 70px 30px 100px 40px;
+  display: none;
+  overflow-y: scroll;
+  @include box-sizing(border);
+  .menu-standard-mobile-menu-container {
+    width: 100%;
+    height: 100%;
+    float: left;
+    clear: both;
+    ul {
+      width: 100%;
+      height: 100%;
+      padding: 0px;
+      margin: 0px;
+      list-style: none;
+      animation-duration: 1500ms;
+      position: relative;
+      z-index: 100;
+      @extend .animated;
+      @extend .fadeIn;
+      li {
+        @include calc(width, "50% - 10px");
+        @include calc(height, "25% - 20px");
+        float: left;
+        padding: 0px;
+        margin: 10px 10px 0px 0px;
+        display: flex;
+        animation-duration: 500ms;
+        position: relative;
+        z-index: 300;
+        @extend .magictime;
+        @extend .spaceInDown;
+        @include min-screen($screen-medium) {
+          @include calc(width, "33.3333% - 10px");
+        }
+        &.outoftheway {
+          z-index: 10;
+          animation-delay: 0ms;
+          animation-duration: 500ms;
+          @extend .magictime;
+          @extend .holeOut;
+        }
+        &.fancyCurrent {
+          z-index: 400;
+          animation-delay: 0ms!important;
+          animation-duration: 750ms;
+          @extend .magictime;
+          @extend .vanishOut;
+        }
+        @include animation-scatter(150ms);
+        &:last-child {
+          margin-bottom: 30px;
+        }
+        a {
+          width: 100%;
+          height: 100%;
+          float: left;
+          font-size: $font-s;
+          color: $color-black;
+          font-weight: $font-bold;
+          padding: 0px;
+          margin: 0px;
+          text-align: center;
+          background-color: rgba(255, 255, 255, 0.5);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .image-menu {
+            width: 100%;
+            height: 100%;
+            float: left;
+            clear:both;
+            position: relative;
+            .image {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              z-index: 500;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+            .title {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              z-index: 1000;
+              background: rgba(255,255,255, 0.4);
+              background: linear-gradient(0deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.3) 100%);
+              color: $color-black;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              box-shadow: -1px 0px 200px rgba(255,255,255,0.4);
+              border-radius: 1px;
+              -webkit-appearance: none;
+            }
+          }
+        }
+        &.currentSelectedMenu {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          z-index: 300;
+          .image-menu {
+            display: none;
+            .image {
+              display: none;
+            }
+            .title {
+              display: none;
+            }
+          }
+          a {
+            background-color: transparent;
+          }
+
+        }
+        ul {
+          width: 100%;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          z-index: 300;
+          display: none;
+          top: 0px;
+          left: 0px;
+          @extend .magictime;
+          @extend .spaceInDown;
+          li {
+            background: rgba(255,255,255, 0.4);
+            background: linear-gradient(0deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.3) 100%);
+            box-shadow: -1px 0px 100px rgba(255,255,255,0.5);
+            border-radius: 1px;
+            -webkit-appearance: none;
+            ul {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    &.active {
+      display: block;
+    }
+  }
+  .go-back {
+    @include use-sprite(back-arrow);
+    display: block;
+    position: fixed;
+    top: 25px;
+    left: 40px;
+    z-index: 400;
+    display: none;
+    animation-duration: 1s;
+    @extend .magictime;
+    @extend .tinUpIn;
+  }
+}
+.current-menu-title {
+  width: 70%;
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  @include transform(translate(-50%));
+  color: $color-white;
+  font-weight: $font-light;
+  text-align: center;
+  font-size: $font-l;
+  display: none;
+  z-index: 500;
+  animation-duration: 1000ms;
+  transition: text-shadow 500ms ease-in-out;
+  @extend .animated;
+  @extend .fadeIn;
+  &.scrolled {
+    text-shadow: 2px 2px 15px rgba(48,125,195,.7),2px 2px 15px rgba(48,125,195,.7);
+  }
+}
+.current-menu-image {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-size: cover;
+  background-position: center center;
+  background-color: $first-color;
+  background-blend-mode: screen;
+  display: none;
+  z-index: 10;
+  animation-duration: 1500ms;
+  @extend .magictime;
+  @extend .vanishIn;
+
+}
+.back-button {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: none;
+}
+.current-menu-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: $first-color;
+  z-index: 20;
+  display: none;
+  opacity: 0.6;
+}
+.bottom-menu {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  display: none;
+  background-color: $second-color;
+  height: 80px;
+  z-index: 200;
+  box-shadow: 5px -10px 60px rgba(255,255,255,0.5);
+  animation-duration: 250ms;
+  @extend .animated;
+  @extend .fadeInUp;
+  a {
+    width: 100%;
+    height: 100%;
+    float: left;
+    clear:both;
+    color: $color-white;
+    font-size: $font-medium;
+    font-weight: $font-regular;
+    line-height: 80px;
+    text-align: center;
+  }
+  &.hide {
+    @extend .animated;
+    @extend .fadeOutDown;
+    animation-duration: 1s;
+  }
+}
+.loading {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+}

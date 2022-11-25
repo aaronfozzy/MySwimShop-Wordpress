@@ -1,0 +1,23 @@
+.hamburger {
+  outline: 0;
+  -webkit-appearance: none;
+  transition: background 500ms ease-in-out;
+  &:focus {
+    outline: 0;
+  }
+}
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before {
+  width: 30px;
+  height: 3px;
+  background-color: $first-color;
+}
+.hamburger-inner::before {
+  top: -7px;
+}
+.hamburger-inner::after {
+  bottom: -7px;
+}
+
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::after, .hamburger.is-active .hamburger-inner::before {
+  background-color: $color-white;
+}

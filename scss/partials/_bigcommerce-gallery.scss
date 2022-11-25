@@ -1,0 +1,16 @@
+.bc-product-gallery__images {
+  max-width: 540px;
+  .swiper-container {
+    .swiper-wrapper {
+      width: 100%;
+      height: 100%;
+      .swiper-slide {
+        max-height: 505px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

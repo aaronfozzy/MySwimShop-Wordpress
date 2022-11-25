@@ -1,0 +1,24 @@
+.back-to-top-btn {
+  width: 45px;
+  height: 45px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: $second-color;
+  display: none;
+  z-index: 10000;
+  cursor: pointer;
+  animation-duration: 1s;
+  @extend .animated;
+  @extend .fadeInUp;
+  .btt-icon {
+    @include use-sprite(back-to-top-arrow);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+  }
+  &:hover {
+    background-color: lighten($first-color, 10%);
+  }
+}

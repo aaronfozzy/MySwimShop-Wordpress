@@ -1,0 +1,26 @@
+@mixin calc($property, $expression) {
+  #{$property}: calc(#{$expression});
+}
+
+@mixin box-sizing($type) {
+  box-sizing: #{$type}-box;
+}
+
+@mixin vertical-center() {
+  position: absolute;
+  top: 50%;
+  @include transform(translate(0%, -50%));
+}
+
+@mixin horizontal-center() {
+  position: absolute;
+  left: 50%;
+  @include transform(translate(-50%, 0%));
+}
+
+@mixin both-center() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  @include transform(translate(-50%, -50%));
+}

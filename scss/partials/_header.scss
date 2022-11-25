@@ -1,0 +1,5 @@
+header {
+  width: 100%;
+  float: left;
+  @include box-sizing(border);
+}

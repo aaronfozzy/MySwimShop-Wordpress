@@ -1,0 +1,23 @@
+.title-crumb-holder {
+  width: 100%;
+  float: left;
+  clear:both;
+  border-bottom: 2px solid $first-color;
+  padding-bottom: 10px;
+  @include box-sizing(border);
+}
+
+.title-crumb-holder-product {
+  width: 100%;
+  float: left;
+  clear:both;
+  padding-bottom: 10px;
+  @include box-sizing(border);
+}
+
+.breadcrumbs {
+  width: 100%;
+  float: left;
+  clear:both;
+  margin-top: 10px;
+}
